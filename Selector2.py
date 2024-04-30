@@ -105,9 +105,14 @@ def option3_click():
     screen_height = crazy4_option.winfo_screenheight()
     crazy4_option.geometry(f"{screen_width}x{screen_height}")
     large_font = ('Verdana', 16)
-    text = "Crazy 4's \nThe objective of the game is to match similar ranks and suit.\n" \
-           "If a card has a match to the card in the play card pile, you may play it.\n" \
-           "4's are considered wild cards. You may play these at any time."
+    # text = "Rules of Crazy 4's \nThe objective of the game is to match similar ranks and suit.\n" \
+    #        "If a card has a match to the card in the play card pile, you may play it.\n" \
+    #        "4's are considered wild cards. You may play these at any time."
+    text = "Rules of Crazy 4'sv\n The objective is to discard all your cards in the play card pile.\n" \
+              "You can only play a card if it matches the rank or suit of the card on top of the play card pile.\n" \
+                "If you don't have a matching card, you must draw from the deck until you get a match.\n" \
+                "4's are considered wild cards and can be played at any time."
+    
     fours_label = tk.Label(crazy4_option, text=text, font=large_font)
     fours_label.pack(padx=20, pady=20, fill=tk.BOTH, expand=True)
     fours_button = tk.Button(crazy4_option, text="Play Crazy 4's", command=on_crazy4_click, font=large_font)

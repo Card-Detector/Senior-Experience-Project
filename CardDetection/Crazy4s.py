@@ -145,8 +145,8 @@ def main():
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
-    # cv2.namedWindow('Card Detector', cv2.WINDOW_NORMAL)
-    # cv2.setWindowProperty('Card Detector', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+    cv2.namedWindow('Card Detector', cv2.WINDOW_NORMAL)
+    cv2.setWindowProperty('Card Detector', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
     while True:
         ret, frame = cap.read()

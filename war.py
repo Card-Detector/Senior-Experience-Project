@@ -95,6 +95,8 @@ def load_model(model_path):
     return model
 
 def main():
+    
+
     model_path = "CardDetection/best_model.pth"
     model = load_model(model_path)
     class_names = [
@@ -225,3 +227,5 @@ def main():
 
     cap.release()
     cv2.destroyAllWindows()
+if __name__ == '__main__':
+    main()
