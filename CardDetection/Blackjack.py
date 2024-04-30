@@ -181,8 +181,13 @@ def main():
                 rank = card.split('_')[0]
 
                 # Calculate card value
-                if rank in ['Jack', 'Queen', 'King']:
+                if rank == 'Joker':
+                    # You can assign a specific value for Joker if needed, or continue as it doesn't need a numerical value here.
+                    continue  # This will skip the rest of the loop iteration for 'Joker'.
+                elif rank in ['Jack', 'Queen', 'King']:
                     value = 10
+                # if rank in ['Jack', 'Queen', 'King']:
+                    # value = 10
                 elif rank == 'Ace':
                     value = 11
                     aces += 1
