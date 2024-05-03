@@ -4,17 +4,9 @@
 import torch
 import cv2
 import numpy as np
-
-from PIL import Image
 from torchvision import transforms
 import torch.nn as nn
-import torch.optim as optim
-from torchvision import datasets, transforms, models
-from torch.utils.data import DataLoader, Dataset
-import os
-from PIL import Image
-from sklearn.model_selection import train_test_split
-import threading
+from torchvision import transforms, models
 
 def draw_rainbow_outline(frame, points, thickness=2):
     colors = [

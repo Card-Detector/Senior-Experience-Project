@@ -4,16 +4,9 @@
 import torch
 import cv2
 import numpy as np
-
-from PIL import Image
 from torchvision import transforms
 import torch.nn as nn
-import torch.optim as optim
-from torchvision import datasets, transforms, models
-from torch.utils.data import DataLoader, Dataset
-import os
-from PIL import Image
-from sklearn.model_selection import train_test_split
+from torchvision import transforms, models
 import threading
 
 
@@ -52,11 +45,6 @@ transform = transforms.Compose([
     transforms.RandomRotation(degrees=10),
     transforms.ToTensor(),
 ])
-import cv2
-import numpy as np
-import torch
-from torchvision import transforms
-from PIL import Image
 
 def preprocess_image(image, size=(256, 256)):
     transform = transforms.Compose([
@@ -106,7 +94,7 @@ def load_model(model_path):
 
 
 def main():
-    model_path = "C:\\Users\\FBRAC\\CardIdentifierSE\\Senior-Experience-Project\\CardDetection\\best_model.pth"
+    model_path = "CardDetection\\best_model.pth"
     model = load_model(model_path)
     class_names = [
         'Ace_C', 'Two_C', 'Three_C', 'Four_C', 'Five_C',
